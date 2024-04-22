@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
-  get 'pages/home'
-  get 'pages/navigations'
-  get 'pages/accounting-widget'
-  devise_for :users, controllers: { sessions: "account/sessions" }
+  root 'pages#index'
+  get 'pages/home', to: 'pages#home'
+  get 'pages/navigations', to: 'pages#navigations'
+  get 'pages/modal-clear', to: 'pages#modal_clear'
+  get 'pages/accounting-widget', to: 'pages#accounting_widget'
+  scope '/accounts' do
+    devise_for :users, controllers: { 
+      sessions: "account/sessions",
+      registrations: "account/registrations",
+      passwords: "account/passwords",
+    }
+  end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
