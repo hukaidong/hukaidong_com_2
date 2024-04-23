@@ -5,6 +5,17 @@ class PagesController < ApplicationController
   end
 
   def home
+    respond_to do |format|
+      format.turbo_stream
+      format.html
+    end
+  end
+
+  def dashboard
+    respond_to do |format|
+      format.turbo_stream
+      format.html
+    end
   end
 
   def navigations

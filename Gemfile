@@ -70,3 +70,5 @@ gem "devise", "~> 4.9"
 
 gem "dartsass-rails", "~> 0.5.0"
 gem "slim-rails", "~> 3.6"
+
+gem "byebug", "~> 11.1", :groups => [:development, :test]

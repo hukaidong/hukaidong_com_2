@@ -1,4 +1,4 @@
-div 
-  = account_widget_frame_tag src: pages_accounting_widget_path
-div
-  = app_frame_tag src: pages_home_path
+= nav_frame_tag src: pages_navigations_path, target: app_frame_id
+= modal_frame_tag
+= render partial: 'pages/accounting/current_signed'
+= app_frame_tag src: home_path

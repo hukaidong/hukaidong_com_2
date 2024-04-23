@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#index'
-  get 'pages/home', to: 'pages#home'
+  get 'home', to: 'pages#home'
+  get 'dashboard', to: 'pages#home'
   get 'pages/navigations', to: 'pages#navigations'
   get 'pages/modal-clear', to: 'pages#modal_clear'
   get 'pages/accounting-widget', to: 'pages#accounting_widget'
