@@ -1,6 +1,8 @@
-= turbo_stream.update 'modal-frame' do
+p.notice = notice
+p.alert = alert
+= turbo_stream.update modal_frame_id do
   = render partial: 'pages/modals/clear'
 
-= turbo_stream.update 'accounting-widget' do
+= turbo_stream.update account_widget_frame_id do
   = render partial: 'pages/accounting/current_signed'
 

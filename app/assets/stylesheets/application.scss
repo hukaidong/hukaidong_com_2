@@ -1,3 +1,7 @@
 // Sassy
 @use "bulma/sass";
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+
+#nav-frame .dropdown {
+	--bulma-dropdown-menu-min-width: 10rem;
+}
