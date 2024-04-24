@@ -1,5 +1,30 @@
 = nav_frame_tag(target: app_frame_id)
-  div = image_tag "logo.png", alt: "Logo"
-  div = link_to "Home", home_path
-  div = link_to "Dashboard", dashboard_path
-  div = button_to "Account", '#', method: :get, onclick: "return false;"
+  .hero.is-bold
+    .container
+      .hero-head
+        nav.navbar.pt-2.pb-2
+          .navbar-brand
+            .navbar-item
+              figure.image.is-48x48.is-skeleton
+                = image_tag "logo.png", alt: "Logo"
+            .navbar-item.pl-0
+              .title.is-4 Kaidong Hu
+            .navbar-burger
+              span
+              span
+              span
+              span
+          .navbar-menu
+            .navbar-start
+              .navbar-item = link_to "Home", home_path, class: "is-active is-link"
+              .navbar-item = link_to "Dashboard", dashboard_path, class: "is-link"
+            .navbar-end
+              .navbar-item
+                .dropdown.is-hoverable.is-right
+                  .dropdown-trigger
+                    button.button.is-outlined.is-rounded.is-primary
+                      span Account
+                      span.icon.is-small
+                        i.fas.fa-angle-down
+                  .dropdown-menu
+                    = render partial: "pages/accounting/current_signed"

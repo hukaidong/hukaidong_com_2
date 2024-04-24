@@ -22,7 +22,7 @@ class Account::SessionsController < Devise::SessionsController
     catch :warden do
       flash[:alert] = 'Invalid email or password'
       respond_to do |format|
-        format.turbo_stream { render turbo_stream: turbo_stream.replace('new_user', partial: 'account/sessions/new_user'), status: :unauthorized ; return }
+        format.turbo_stream { render turbo_stream: turbo_stream.replace('new_user', partial: 'account/sessions/new_user'); return }
         format.html { render :new ; return }
       end
     end

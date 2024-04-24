@@ -1,6 +1,7 @@
 #accounting-widget = account_widget_frame_tag
-  - if user_signed_in?
-    = render partial: 'pages/accounting/signed_in'
-  - else
-    = render partial: 'pages/accounting/signed_out'
+  .dropdown-menu
+    - if user_signed_in?
+      = render partial: 'pages/accounting/signed_in'
+    - else
+      = render partial: 'pages/accounting/signed_out'
 

@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title
+      | HukaidongCom
+    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_importmap_tags
+    script src="https://kit.fontawesome.com/3a0d3925ea.js" crossorigin="anonymous"
+  body
+    = yield

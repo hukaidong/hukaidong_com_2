@@ -6,8 +6,8 @@ class PagesController < ApplicationController
 
   def home
     respond_to do |format|
-      format.turbo_stream
-      format.html
+      format.turbo_stream { render turbo_stream: turbo_stream.replace(app_frame_id, partial: 'pages/home') }
+      format.html { render partial: 'pages/home' }
     end
   end
 
